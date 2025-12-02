@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Jennifer Davidson — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Portfolio of Jennifer Davidson — web developer and designer">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Jennifer Davidson</a>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <h1>Hi — I'm Jennifer</h1>
+      <p class="lead">My a Paraprofessional in special education.</p>
+      <a class="btn" href="about.html">Learn more</a>
+    </section>
+
+    <section id="projects" class="container projects">
+      <h2>Selected Projects</h2>
+      <p class="muted">Add project screenshots to the <code>images/</code> folder. Local sample images are included.</p>
+      <div class="grid">
+        <article class="card">
+          <figure>
+            <img src="images/project1.svg" alt="Project One screenshot" data-full="images/project1.svg">
+            <figcaption>Project One — e-commerce redesign</figcaption>
+          </figure>
+          <p>Brief description of the project and the technologies used.</p>
+        </article>
+        <article class="card">
+          <figure>
+            <img src="images/project2.svg" alt="Project Two screenshot" data-full="images/project2.svg">
+            <figcaption>Project Two — marketing microsite</figcaption>
+          </figure>
+          <p>Brief description of the project and the impact or outcome.</p>
+        </article>
+        <article class="card">
+          <figure>
+            <img src="images/project3.svg" alt="Project Three screenshot" data-full="images/project3.svg">
+            <figcaption>Project Three — dashboard prototype</figcaption>
+          </figure>
+          <p>Brief description of the project and a link to a live demo or repo.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:jennifer.davidson@example.com">jennifer.davidson@example.com</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2024 Jennifer Davidson</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox modal -->
+  <div id="lightbox" aria-hidden="true">
+    <div class="close" aria-label="Close">✕</div>
+    <button class="nav prev" aria-label="Previous">‹</button>
+    <button class="nav next" aria-label="Next">›</button>
+    <div class="inner">
+      <img src="" alt="">
+      <div class="caption" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <script src="js/lightbox.js"></script>
+</body>
+</html>

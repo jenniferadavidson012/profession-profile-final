@@ -1,0 +1,143 @@
+<! DOCTYPE html>
+/* Basic reset and typography */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  color:#222;
+  background:#f7f7f9;
+  line-height:1.5;
+}
+.container{max-width:1000px;margin:0 auto;padding:24px}
+
+/* Header */
+.site-header{background:#ffffff;border-bottom:1px solid #e6e6e9}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:700;color:#0b3d91;text-decoration:none;font-size:1.1rem}
+.nav-list{list-style:none;display:flex;gap:12px}
+.nav-list a{color:#333;text-decoration:none;padding:8px;border-radius:6px}
+.nav-list a:hover{background:#f0f0f3}
+
+/* Hero */
+.hero{padding:48px 0;text-align:left}
+.hero h1{font-size:2rem;margin-bottom:8px}
+.lead{color:#444;margin-bottom:16px}
+.btn{display:inline-block;background:#0b3d91;color:#fff;padding:10px 16px;border-radius:6px;text-decoration:none}
+
+/* Projects grid */
+.projects{padding:24px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:12px}
+.card{background:#fff;padding:0;border-radius:8px;box-shadow:0 1px 4px rgba(15,15,15,0.06);overflow:hidden}
+.card > p{padding:12px}
+
+/* Figure and caption */
+.card figure{margin:0}
+.card img{width:100%;height:200px;object-fit:cover;display:block}
+.card figcaption{padding:10px 12px;background:#fafafa;font-weight:600;font-size:0.95rem;color:#222}
+.card p{font-size:0.95rem;color:#444}
+
+/* About page */
+.about{padding:24px 0}
+.about h1{margin-bottom:12px}
+.about ul{list-style:disc;margin-left:20px}
+.profile-image{width:120px;height:120px;object-fit:cover;border-radius:50%;float:left;margin-right:16px;border:3px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,0.08)}
+
+/* Contact */
+.contact{padding:24px 0}
+
+/* Footer */
+.site-footer{border-top:1px solid #e6e6e9;background:#fff;padding:12px 0;margin-top:24px}
+.site-footer p{color:#666;text-align:center;font-size:0.95rem}
+
+/* Lightbox */
+#lightbox{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.75);z-index:999}
+#lightbox .inner{max-width:95%;max-height:90%;text-align:center}
+#lightbox img{max-width:100%;max-height:80vh;border-radius:6px;box-shadow:0 6px 28px rgba(0,0,0,0.5)}
+#lightbox .caption{color:#fff;margin-top:12px;text-align:center;font-size:1rem}
+#lightbox .close{position:absolute;top:18px;right:22px;color:#fff;font-size:28px;cursor:pointer}
+
+/* Lightbox navigation buttons */
+.nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.45);border:0;color:#fff;width:44px;height:60px;border-radius:6px;cursor:pointer;font-size:30px;display:flex;align-items:center;justify-content:center}
+.nav.prev{left:18px}
+.nav.next{right:18px}
+.nav:focus{outline:2px solid #fff}
+
+/* Caption animation */
+.caption{opacity:0;transform:translateY(8px);transition:opacity 260ms ease, transform 260ms ease}
+.caption.show{opacity:1;transform:translateY(0)}
+
+/* Helpers */
+.muted{color:#666;font-size:0.95rem;margin-bottom:8px}
+
+/* Contact section (footer-like) */
+.contact-section{
+  background:#0b3d91;
+  color:#fff;
+  padding:48px 0;
+  margin-top:48px;
+}
+.contact-section h2{
+  color:#fff;
+  margin-bottom:12px;
+}
+.contact-section a{
+  color:#fff;
+  text-decoration:underline;
+}
+.contact-section a:hover{
+  text-decoration:none;
+}
+
+/* Responsive tweaks */
+@media (max-width:768px){
+  .container{padding:16px}
+  .header-inner{flex-direction:column;gap:12px;padding:12px}
+  .brand{font-size:1rem}
+  .nav-list{flex-wrap:wrap;justify-content:center;gap:8px}
+  .nav-list a{padding:6px 12px;font-size:0.9rem}
+  .hero{padding:24px 0}
+  .hero h1{font-size:1.75rem;margin-bottom:12px}
+  .lead{font-size:0.95rem;margin-bottom:12px}
+  .btn{padding:12px 20px;font-size:0.95rem;display:inline-block}
+  .grid{grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+  .card img{height:120px}
+  .card figcaption{font-size:0.85rem;padding:8px}
+  .card p{font-size:0.9rem}
+  .about h1{font-size:1.5rem}
+  .about ul{margin-left:16px}
+  .profile-image{width:100px;height:100px;margin-right:12px}
+  .contact-section{padding:32px 16px}
+  .contact-section h2{font-size:1.3rem}
+  #lightbox .close{font-size:24px;top:12px;right:12px}
+  .nav{width:40px;height:50px;font-size:24px}
+  .nav.prev{left:8px}
+  .nav.next{right:8px}
+}
+
+@media (max-width:480px){
+  .container{padding:12px}
+  .header-inner{padding:8px}
+  .brand{font-size:0.95rem}
+  .nav-list{gap:6px}
+  .nav-list a{padding:4px 8px;font-size:0.8rem}
+  .hero{padding:16px 0}
+  .hero h1{font-size:1.4rem}
+  .lead{font-size:0.9rem}
+  .btn{padding:10px 16px;font-size:0.9rem}
+  .grid{grid-template-columns:1fr;gap:12px}
+  .card img{height:100px}
+  .card figcaption{font-size:0.8rem;padding:6px}
+  .card p{font-size:0.85rem}
+  .projects h2{font-size:1.3rem}
+  .about h1{font-size:1.3rem}
+  .about h2{font-size:1.1rem}
+  .profile-image{width:80px;height:80px;margin-right:8px;margin-bottom:8px}
+  .contact-section{padding:24px 12px;margin-top:24px}
+  .contact-section h2{font-size:1.1rem}
+  .contact-section p{font-size:0.9rem}
+  #lightbox .caption{font-size:0.9rem;margin-top:8px}
+  #lightbox .close{font-size:20px;top:8px;right:8px}
+  .nav{width:36px;height:44px;font-size:18px}
+  .nav.prev{left:4px}
+  .nav.next{right:4px}
+}
