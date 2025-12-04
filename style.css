@@ -26,9 +26,9 @@ body{
 
 /* Projects grid */
 .projects{padding:24px 0}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px;margin-top:12px}
 .card{background:#fff;padding:0;border-radius:8px;box-shadow:0 1px 4px rgba(15,15,15,0.06);overflow:hidden}
-.card > p{padding:12px}
+.card > p{padding:16px 16px}
 
 /* Figure and caption */
 .card figure{margin:0}
